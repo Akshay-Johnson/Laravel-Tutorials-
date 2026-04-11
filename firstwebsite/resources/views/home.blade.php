@@ -6,7 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to my first website</h1>
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+      <h1>Home</h1>
+      <form action="{{ route('form') }}" method="POST">
+        @csrf
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <button type="submit" value="Submit">Submit</button>
+
+
+      </form>
 </body>
 </html>
