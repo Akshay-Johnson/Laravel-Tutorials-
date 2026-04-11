@@ -7,6 +7,7 @@
 </head>
 <body>
       <header>
+        <img src="{{ asset('images/ac.png') }}" alt="ac image" className="max-w-12 h-12" />
          @yield('header')
       </header>
       <main>

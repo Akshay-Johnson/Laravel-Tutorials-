@@ -6,7 +6,7 @@
 @endsection
 
 @section('main')
-           <h1>Home</h1>
+           <h1 classname="text-2xl font-bold text-center text-gray-800">Home</h1>
       
       <form action="{{ route('form') }}" method="POST">
         @csrf
