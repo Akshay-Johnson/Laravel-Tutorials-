@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-      <h1>Home</h1>
+@extends('layouts.main')
+
+@section('header')
+<h2>Welcome to the Home Page</h2>
+@include('sidemenu')
+@endsection
+
+@section('main')
+           <h1>Home</h1>
+      
       <form action="{{ route('form') }}" method="POST">
         @csrf
         <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
@@ -15,5 +16,11 @@
 
 
       </form>
-</body>
-</html>
+      <button><a href="{{ route('contact') }}">Contact</a></button>
+@endsection 
+
+@section('footer')
+
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+@endsection
+   
